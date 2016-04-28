@@ -18,13 +18,27 @@ app.config(
 		});
 
 		$stateProvider
-			/*** HOME ***/
+			// Home Page
 			.state('homepage', {
 				url: "/",
 				templateUrl: "components/home/homeView.html",
 			})
 		
-			.state('store', {
+			// Static Pages
+		
+			.state('static' , {
+				abstract: true,
+				url: "",
+				templateUrl: "components/static/content.html",
+			})
+		
+			.state('static.aboutus', {
+				url: "/about",
+				templateUrl: "components/static/pages/aboutus.html",
+			})
+		
+			// Store
+			.state('store' , {
 				abstract: true,
 				url: "/store",
         		defaultChild: 'store.landing',
@@ -42,7 +56,7 @@ app.config(
 			})
 		
 		
-			/*** ADMIN ***/
+			// Admin Section
 			.state('admin', {
 				abstract: true,
 				url: "/admin",

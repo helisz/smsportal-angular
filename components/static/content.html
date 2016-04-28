@@ -1,28 +1,29 @@
-<!-- TEMPLATE for content page -->
-
 <!-- Wrapper-->
-<div id="wrapper" ng-controller="storeCtrl">
+<div id="wrapper">
 
 	<!-- Navigation -->
 	<div ng-include="'components/shared/header.html'"></div>
 
+	<!-- Page wraper -->
+	<!-- ng-class with current state name give you the ability to extended customization your view -->
+
 	<div id="content" class="container">
 
 		<div class="row">
-			<div  class="col-sm-3" >
-				<div ng-include="'components/store/sidebar.html'"></div>
-			</div>
-			<div  class="col-sm-9" >
-				
-				<!-- Store [Main view]  -->
+			<div  class="col-sm-12" >
+
+				<!-- Main view  -->
 				<div ui-view></div>
+
 			</div>
 		</div>
 
 
 	</div>
 	<!-- End page wrapper-->
-	
+
+
+	<!-- FOOTER -->
 	<footer class="footer" ng-include="'components/shared/footer.html'"></footer>
 
 </div>
