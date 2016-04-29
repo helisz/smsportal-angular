@@ -4,6 +4,23 @@
  */
 
 
+
+// Detect scroll function for Top Navigation
+app.directive('scrollNav', function ($window, $state) {
+  return function(scope, element, attrs) {
+    angular.element($window).bind("scroll", function() {
+      if (this.pageYOffset >= 100) {
+        scope.scrollDown = true;
+      } else {
+        scope.scrollDown = false;
+      }
+      scope.$apply();
+    });
+  };
+});
+
+
+
 /**
  * pageTitle - Directive for set Page title - mata title
  */

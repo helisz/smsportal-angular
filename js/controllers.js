@@ -26,9 +26,9 @@ app.controller('MainCtrl', function($scope){
 		},
 		{
 			'text': 'Use Cases',
-			'scroll': 'portfolio',
-			'a': '#portfolio',
-			'routeAnchor': '#/home#portfolio'
+			'scroll': 'usecases',
+			'a': '#usecases',
+			'routeAnchor': '#/home#usecases'
 		},
 		{
 			'text': 'About',

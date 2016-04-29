@@ -1,25 +1,27 @@
-<nav class="navbar navbar-dark bg-inverse" style='background: white'>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<a class="navbar-brand" ui-sref="homepage">SMS Portal</a>
-				<ul class="nav navbar-nav">
-				
-					<li class="nav-item" ng-repeat="nav in navs">
-						<a class="nav-link" ui-sref="homepage">{{nav.text}}</a>
-					</li>
-					
-					<li class="nav-item">
-						<a class="nav-link" ui-sref="static.aboutus">About Us</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" ui-sref="store.landing">Store</a>
-					</li>
+<nav id="header-navbar" class="navbar navbar-default navbar-fixed-top" ng-class="{'navbar-shrink': scrollDown, 'navbar-home': $state.$current.name == 'homepage', }" style='background: white' scroll-nav role="navigation">
+	<div class="container-fluid top-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<a class="navbar-brand" href="./#" du-smooth-scroll>SMS Portal</a>
+					<ul class="nav navbar-nav">
 
-					<li class="nav-item">
-						<a class="nav-link" ui-sref="admin.dashboard">Admin</a>
-					</li>
-				</ul>
+						<li class="nav-item" ng-repeat="nav in navs">
+							<a class="nav-link" ui-sref="homepage" href="{{nav.a}}" du-smooth-scroll>{{nav.text}}</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" ui-sref="static.aboutus">About Us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" ui-sref="store.landing">Store</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" ui-sref="admin.dashboard">Admin</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
