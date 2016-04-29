@@ -15,4 +15,34 @@ function MainCtrl() {
 };
 
 
-app.controller('MainCtrl', MainCtrl);
+app.controller('MainCtrl', function($scope){
+	$scope.navs = [
+
+		{
+			'text': 'Product',
+			'scroll': 'services',
+			'a': '#services',
+			'routeAnchor': '#/home#services'
+		},
+		{
+			'text': 'Use Cases',
+			'scroll': 'portfolio',
+			'a': '#portfolio',
+			'routeAnchor': '#/home#portfolio'
+		},
+		{
+			'text': 'About',
+			'scroll': 'about',
+			'a': '#about',
+			'routeAnchor': '#/home#about'
+		},
+		{
+			'text': 'Contact',
+			'scroll': 'contact',
+			'a': '#contact',
+			'routeAnchor': '#/home#contact'
+		}
+	];
+});
+
+
