@@ -1,0 +1,71 @@
+{
+	"succInfo": "OK",
+	"succFlag": true,
+	"dataField": [{
+		"offerId": "2399f5b3-8359-42bf-a523-47ffb1a66dc8",
+		"offerName": "test",
+		"categoryId": 101,
+		"effDate": "2016-04-01",
+		"expDate": "2099-12-31",
+		"createDate": "2016-04-25",
+		"createBy": 1,
+		"priorityId": 1,
+		"pricePlanId": 1,
+		"preBalAcctId": 1,
+		"productOfferPropDefs": [{
+			"defId": 2,
+			"defName": "PRICE",
+			"unitId": null,
+			"effDate": "2016-04-01",
+			"expDate": "2099-12-31",
+			"createDate": "2016-04-26",
+			"createBy": null,
+			"productOfferProps": [{
+				"propId": 2,
+				"value": "100",
+				"valueType": null,
+				"nullable": null,
+				"defaultValue": null,
+				"maxValue": null,
+				"minValue": null,
+				"effDate": "2016-04-01",
+				"expDate": "2016-04-30",
+				"createBy": null,
+				"createDate": "2016-04-26"
+			}]
+		}, {
+			"defId": 1,
+			"defName": "DISPLAY_NAME",
+			"unitId": null,
+			"effDate": "2016-04-01",
+			"expDate": "2099-12-31",
+			"createDate": "2016-04-26",
+			"createBy": null,
+			"productOfferProps": [{
+				"propId": 1,
+				"value": "TEST PRODUCT",
+				"valueType": null,
+				"nullable": null,
+				"defaultValue": null,
+				"maxValue": null,
+				"minValue": null,
+				"effDate": "2016-04-01",
+				"expDate": "2099-12-31",
+				"createBy": null,
+				"createDate": "2016-04-26"
+			}]
+		}]
+	}, {
+		"offerId": "9cdbbf3b-33bf-4c35-8b05-36bb35420acd",
+		"offerName": "testABC",
+		"categoryId": null,
+		"effDate": "2016-04-01",
+		"expDate": "2099-12-31",
+		"createDate": null,
+		"createBy": null,
+		"priorityId": null,
+		"pricePlanId": null,
+		"preBalAcctId": null,
+		"productOfferPropDefs": []
+	}]
+}
