@@ -3,16 +3,8 @@
 var gulp 	= require('gulp');
 var sass 	= require('gulp-sass');
 var wiredep = require('wiredep').stream;
-/* 
-gulp.task('bower', function () {  
-  wiredep({
-    src: './index.html',
-    directory: './bower_componets/',
-    bowerJson: require('./bower.json'),
-  });
-});
 
-*/
+/** Wiredep - add bower dependencies to index.html **/
 gulp.task('bower', function () {  
   gulp.src('./index.html')
     .pipe(wiredep({

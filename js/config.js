@@ -25,7 +25,6 @@ app.config(
 			})
 		
 			// Static Pages
-		
 			.state('static' , {
 				abstract: true,
 				url: "",
@@ -60,12 +59,13 @@ app.config(
 			.state('admin', {
 				abstract: true,
 				url: "/admin",
+        		defaultChild: 'admin.dashboard',
 				templateUrl: "components/admin/content.html",
 			})
 			.state('admin.dashboard', {
 				url: "/dashboard",
 				templateUrl: "components/admin/sections/dashboard.html",
-				data: { pageTitle: 'Example view' }
+				data: { pageTitle: 'Dashboard' }
 			})
 			.state('admin.function1', {
 				url: "/function1",

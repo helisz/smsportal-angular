@@ -7521,6 +7521,10 @@ html, body {
 .nav > li > a {
   padding: 14px 10px 14px 15px; }
 
+.timeline-image {
+  width: 100px;
+  height: auto; }
+
 nav.navbar {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;

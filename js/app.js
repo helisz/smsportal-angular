@@ -5,6 +5,7 @@ var app = angular.module('smsapp', [
 	
 		'smsapp.home',
 		'smsapp.store',
+		'smsapp.admin',
 	
 		'duScroll'
 
@@ -14,6 +15,9 @@ var app = angular.module('smsapp', [
 var home = angular.module('smsapp.home', []);
 
 var store = angular.module('smsapp.store', []);
+
+
+var admin = angular.module('smsapp.admin', []);
 
 // var home = angular.module('smsapp.home', ['ngAnimate']);
 
