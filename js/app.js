@@ -1,11 +1,16 @@
 var app = angular.module('smsapp', [
-        'ui.router',                    // Routing
-        'oc.lazyLoad',                  // ocLazyLoad
-        'ui.bootstrap',                 // Ui Bootstrap
-	
+        'ui.router',
+        'oc.lazyLoad',
+        'ui.bootstrap',
+		'ngCookies',
+		
 		'smsapp.home',
 		'smsapp.store',
 		'smsapp.admin',
+	
+		'smsapp.login',
+		'smsapp.register',
+		'smsapp.forgetpw',
 	
 		'duScroll'
 
@@ -19,18 +24,11 @@ var store = angular.module('smsapp.store', []);
 
 var admin = angular.module('smsapp.admin', []);
 
-// var home = angular.module('smsapp.home', ['ngAnimate']);
+var login = angular.module('smsapp.login', []);
 
-// var store = angular.module('smsapp.store', ['ngAnimate']);
+var register = angular.module('smsapp.register', []);
 
-//var doc = angular.module('smsapp.doc', ['ngRoute', 'ngAnimate']);
-
-//var login = angular.module('smsapp.login', ['ngRoute', 'ngAnimate']);
-
-//var register = angular.module('smsapp.register', ['ngRoute', 'ngAnimate']);
-
-//var forgetpw = angular.module('smsapp.forgetpw', ['ngRoute', 'ngAnimate']);
-
+var forgetpw = angular.module('smsapp.forgetpw', []);
 
 
 app.run(function($rootScope){
@@ -39,4 +37,31 @@ app.run(function($rootScope){
 		$("html, body").animate({ scrollTop: 0 }, 200);
 	}) 
 	//the above code here
-})
+});
+
+
+app.run(['$rootScope', '$location', '$cookieStore', '$http',
+    function($rootScope, $location, $cookieStore, $http ) {
+
+        $rootScope.globals = $cookieStore.get('globals') || {};
+		
+        if ($rootScope.globals.currentUser) {
+			console.log("logined");
+            $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata; // jshint ignore:line
+        }
+
+        $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+            //if($location.hash()) $anchorScroll();
+        });
+
+        $rootScope.$on('$locationChangeStart', function (event, next, current) {
+            // redirect to login page if not logged in and trying to access a restricted page
+            var restrictedPage = $.inArray($location.path(), ['/login', '/register']) === -1;
+            var loggedIn = $rootScope.globals.currentUser;
+
+         //   if (restrictedPage && !loggedIn) {
+          //      $location.path('/login');
+           // }
+        });
+    }
+]);

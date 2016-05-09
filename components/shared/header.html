@@ -21,6 +21,48 @@
 							<a class="nav-link" ui-sref="admin.dashboard">Admin</a>
 						</li>
 					</ul>
+
+				
+					<ul class="nav navbar-nav navbar-right" ng-if="!globals.currentUser" >
+						<li><a ui-sref="user.register"><span class="glyphicon glyphicon-user"></span>
+							Sign up
+							</a>
+						</li>
+						<li><a ui-sref="user.login"><span class="glyphicon glyphicon-log-in"></span>
+							Login
+							</a>
+						</li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right" ng-if="globals.currentUser" >
+						<!--li><a ng-click="hideMenu()" href="smsadmin/ex.dashboard.html"-->
+						<li class="dropdown" ><a data-toggle="dropdown"  href="">
+							<span class="glyphicon glyphicon glyphicon-user"></span>
+							Hello,
+							{{globals.currentUser.username}}
+							<span class="caret"></span>
+							</a>
+
+							<ul class="dropdown-menu">
+								<li><a href="smsadmin/ex.dashboard.html">
+									<span class="glyphicon glyphicon-th-large"></span>
+									"My Account
+									</a>
+								</li>
+								<li><a href="#login">
+									<span class="glyphicon glyphicon-log-out"></span>
+									Logout
+									</a></li>
+							</ul>
+
+						</li>
+
+						<li><a ng-click="hideMenu()" href="#/cart"><span class="glyphicon glyphicon-shopping-cart"></span>
+							<translate>{{"Cart"}}</translate>
+							<span class="cart-num" ng-show="cartnumber">{{cartnumber}}</span>
+							</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>

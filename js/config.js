@@ -24,6 +24,30 @@ app.config(
 				templateUrl: "components/home/homeView.html",
 			})
 		
+		
+			// Login
+			.state('user', {
+				abstract: true,
+				url: "",
+				templateUrl: "components/login/content.html"
+			})
+		
+			.state('user.login', {
+                controller: 'LoginController',
+				url: "/login",
+				templateUrl: "components/login/loginView.html",
+				controllerAs: 'vm'
+			})
+		
+			.state('user.register', {
+				controller: 'RegisterController',
+				url: "/register",
+				templateUrl: "components/login/registerView.html",
+				controllerAs: 'vm'
+			})
+		
+		
+		
 			// Static Pages
 			.state('static' , {
 				abstract: true,
