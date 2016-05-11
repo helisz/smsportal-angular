@@ -66,6 +66,7 @@ app.config(
 				url: "/store",
         		defaultChild: 'store.landing',
 				templateUrl: "components/store/content.html",
+				controller: "storeCtrl",
 			})
 		
 			.state('store.landing', {
@@ -77,7 +78,26 @@ app.config(
 				url: "/all",
 				templateUrl: "components/store/storeAll.html",
 			})
+			
+			// Product
+			.state('product' , {
+				abstract: true,
+				url: "/product",
+        		defaultChild: 'product.landing',
+				templateUrl: "components/store/product.html",
+				controller: "productCtrl",
+			})
+			
+			.state('product.landing', {
+				url: "/",
+				templateUrl: "components/store/productLanding.html",
+			})
 		
+			.state('product.detail', {
+				url: "/:defName",
+				templateUrl: "components/store/productDetail.html",
+				controller: "productDetailCtrl",
+			})
 		
 			// Admin Section
 			.state('admin', {

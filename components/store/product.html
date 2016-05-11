@@ -1,0 +1,29 @@
+<!-- TEMPLATE for product page -->
+
+<!-- Wrapper-->
+<div id="wrapper" ng-controller="productCtrl">
+
+	<!-- Navigation -->
+	<div ng-include="'components/shared/header.html'"></div>
+
+	<div id="content" class="container">
+
+		<div class="row">
+			<div  class="col-sm-3" >
+				<div ng-include="'components/store/sidebar.html'"></div>
+			</div>
+			<div  class="col-sm-9" >
+				
+				<!-- Store [Main view]  -->
+				<div ui-view></div>
+			</div>
+		</div>
+
+		
+	</div>
+	<!-- End page wrapper-->
+	
+	<footer class="footer" ng-include="'components/shared/footer.html'"></footer>
+
+</div>
+<!-- End wrapper-->

@@ -3,6 +3,7 @@ var app = angular.module('smsapp', [
         'oc.lazyLoad',
         'ui.bootstrap',
 		'ngCookies',
+		'ngCart',
 		
 		'smsapp.home',
 		'smsapp.store',
@@ -18,18 +19,11 @@ var app = angular.module('smsapp', [
 
 
 var home = angular.module('smsapp.home', []);
-
 var store = angular.module('smsapp.store', []);
-
-
 var admin = angular.module('smsapp.admin', []);
-
 var login = angular.module('smsapp.login', []);
-
 var register = angular.module('smsapp.register', []);
-
 var forgetpw = angular.module('smsapp.forgetpw', []);
-
 
 app.run(function($rootScope){
 
