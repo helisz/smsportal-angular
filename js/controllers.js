@@ -16,25 +16,25 @@ app.controller('MainCtrl', function($scope){
 		{
 			'text': 'Product',
 			'scroll': 'services',
-			'a': '#services',
+			'a': 'services',
 			'routeAnchor': '#/home#services'
 		},
 		{
 			'text': 'Use Cases',
 			'scroll': 'usecases',
-			'a': '#usecases',
+			'a': 'usecases',
 			'routeAnchor': '#/home#usecases'
 		},
 		{
 			'text': 'About',
 			'scroll': 'about',
-			'a': '#about',
+			'a': 'about',
 			'routeAnchor': '#/home#about'
 		},
 		{
 			'text': 'Contact',
 			'scroll': 'contact',
-			'a': '#contact',
+			'a': 'contact',
 			'routeAnchor': '#/home#contact'
 		}
 	];

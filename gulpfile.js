@@ -16,7 +16,7 @@ gulp.task('bower', function () {
 
 /** gulp-sass **/
 gulp.task('sass', function () {
-	return gulp.src('./scss/*.scss')
+	return gulp.src('./scss/**/*.scss')
 		.pipe(sass()
 			  .on('error', sass.logError)
 			 )
@@ -24,7 +24,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('sass:watch', function () {
-	gulp.watch('./scss/*.scss', ['sass']);
+	gulp.watch('./scss/**/*.scss', ['sass']);
 });
 
 

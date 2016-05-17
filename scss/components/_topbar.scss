@@ -1,0 +1,38 @@
+nav.navbar {
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	background-color: $blue;
+	&.navbar-home{
+		padding: 25px 0px;
+		background-color: transparent;
+		&.navbar-shrink{
+			padding: 0;
+			background-color: $blue;
+		}
+	}
+	&.navbar-admin{
+		background-color: white;
+	}
+}
+
+.navbar-default{
+	.navbar-nav{
+		margin-left: 30px;
+		>li{ 
+			>a{
+				padding: 20px 10px 20px 10px;
+				color: white;
+				-webkit-transition: all 0.4s ease;
+				transition: all 0.4s ease;
+				&:hover{
+					background: rgba(255,255,255,0.1);
+				}
+			}
+		}
+	}
+}
+
+.navbar-fixed-top {
+	padding: 0;
+	border: 0 !important;
+}

@@ -10,7 +10,7 @@
 app.config(
 
 	function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
-		$urlRouterProvider.otherwise("/");
+		$urlRouterProvider.otherwise("/home");
 
 		$ocLazyLoadProvider.config({
 			// Set to true if you want to see what and when is dynamically loaded
@@ -20,7 +20,7 @@ app.config(
 		$stateProvider
 			// Home Page
 			.state('homepage', {
-				url: "/",
+				url: "/home",
 				templateUrl: "components/home/homeView.html",
 			})
 		

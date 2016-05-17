@@ -1,0 +1,77 @@
+header{
+	#video-background{
+		position: relative; 
+		min-width: 100%; 
+		min-height: 100%;
+		background-size: cover;
+		overflow: hidden;
+		object-fit: cover;
+		opacity: 0.15;
+	}
+	&.home-header{
+		position: relative;
+		height: 65vh;
+		overflow: hidden;
+		background: -moz-linear-gradient(top, rgba(4,91,163,1) 0%, rgba(4,91,163,0.9) 16%, rgba(4,91,163,0.8) 100%);
+		background: -webkit-linear-gradient(top, rgba(4,91,163,1) 0%,rgba(4,91,163,0.9) 16%,rgba(4,91,163,0.8) 100%);
+		background: linear-gradient(to bottom, rgba(4,91,163,1) 0%,rgba(4,91,163,0.9) 16%,rgba(4,91,163,0.8) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#045ba3', endColorstr='#cc045ba3',GradientType=0 );
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+		-o-background-size: cover;
+	}
+
+} 
+
+.home-float-paper {
+	background: #F0F2F4;
+	> .container {
+		> .row{
+			margin-top: -180px;
+			padding-top: 60px;
+			.paper{
+				background: #FFF;
+				position: relative;
+				z-index: 10;
+				background: white;
+				padding: 30px 25px;
+				margin-bottom: -60px;
+				.service-heading{
+					margin: 20px 0 10px 0;
+				}
+			}
+		} 
+
+	}
+}
+
+.use-cases-block {
+   height:100%;
+   color: white;
+   position:absolute;
+   top:0;
+   left:0;
+   background: rgba(4,111,187, 0.9);
+   padding: 30px 20px;
+   margin:0px 15px;
+   font-size: 14px;
+
+}
+.use-cases-block .title{
+   font-size: 1.6em;
+   font-family: 'Montserrat', Arial, sans-serif;
+   font-weight: 400;
+   color: white;
+}
+
+.use-cases-block .subtitle{
+   text-transform: uppercase;
+   font-size: 0.8em;
+   opacity: 0.5;
+   color: white;
+}
+.use-cases-block .desc{
+   font-size: 1em;
+   color: white;
+}

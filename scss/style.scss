@@ -44,6 +44,12 @@
 // Custom style
 // Your custom style to override base style
 @import "custom";
+@import "components/global";
+@import "components/topbar";
+@import "components/footer";
+@import "components/home";
+@import "components/store";
+@import "components/admin";
 
 // Clear layout on print mode
 @media print {
