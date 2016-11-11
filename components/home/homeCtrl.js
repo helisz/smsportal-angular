@@ -1,6 +1,60 @@
 'use strict';
 
-home.controller('homeCtrl', function ($scope) {
+home.controller('homeCtrl', function ($scope, $http, $location) {
+
+	$scope.PostDataResponse = "E";
+
+	$scope.SendData = function () {
+
+		var data = {
+			type: 'normalSearch', 
+			param: {
+				effDate: '2015-04-01',
+				expDate: '2099-12-31'
+			},
+			start: '0', 
+			end: '100'
+		}
+
+		var url = "";
+		for (var i in data) {
+			if (data.hasOwnProperty(i)) {
+				if (typeof data[i] != "object") {
+					url = url.concat("&", i, "=",data[i]);
+				}else{
+					var innerdata = data[i];
+					for (var j in innerdata) {
+						if (innerdata.hasOwnProperty(j)){
+							url = url.concat("&", j, "=",innerdata[j]);
+						}
+					}
+				}
+			}
+		}
+
+		url = $location.host() + "?" + url;
+
+
+		var config = {
+			headers : {
+				'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+			},
+		}
+
+		$http.post("/", data, config)
+			.success(function (data, status, headers, config) {
+			$scope.PostDataResponse = data;
+			console.log(data);
+		})
+			.error(function (data, status, header, config) {
+			$scope.ResponseDetails = "Data: " + data +
+				"<hr />status: " + status +
+				"<hr />headers: " + header +
+				"<hr />config: " + config;
+		});
+
+	}
+
 
 	/** products **/
 	$scope.carousels = [

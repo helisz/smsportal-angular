@@ -8,16 +8,26 @@
 
 		<!-- Carousel -->
 		<div ng-include="'components/home/parts/carousel.html'"></div>
-		
+
 		<!-- Products -->
 		<div ng-include="'components/home/parts/product.html'"></div>
-		
+
 		<!-- Use Cases -->
 		<div ng-include="'components/home/parts/cases.html'"></div>
-		
+
+
+		<div class="container">
+		<button ng-click="SendData()">Submit</button>
+			<div class="jumbotron">
+				{{PostDataResponse}}
+				{{GlobalUrl}}
+			</div>
+		</div>
+
+
 		<!-- About Us -->
 		<div ng-include="'components/home/parts/about.html'"></div>
-		
+
 		<!-- Contact -->
 		<div ng-include="'components/home/parts/contact.html'"></div>
 

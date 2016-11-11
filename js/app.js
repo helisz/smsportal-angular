@@ -4,7 +4,6 @@ var app = angular.module('smsapp', [
         'ui.bootstrap',
 		'ngCookies',
 		'ngCart',
-		
 		'smsapp.home',
 		'smsapp.store',
 		'smsapp.admin',
